@@ -1,7 +1,7 @@
-# 📶 Quectel EC200U-CN WebUI & Arduino Library
+# 📶 Quectel EC200U-CN WebUI
 **Created by [MisterNegative](https://github.com/MISTERNEGATIVE21)**
 
-Welcome! This repository provides a complete Web User Interface (WebUI) and Arduino integration guide for the **Quectel EC200U-CN** LTE Cat 1 module. By using this setup, you can monitor network status, manage SMS, and control your module directly from a web browser, all powered by your Arduino board.
+Welcome! This repository provides a complete Web User Interface (WebUI) for the **Quectel EC200U-CN** LTE Cat 1 module. By using this setup, you can monitor network status, manage SMS, and control your module directly from a web browser, all powered by your Arduino board.
 
 ---
 
@@ -17,18 +17,13 @@ Welcome! This repository provides a complete Web User Interface (WebUI) and Ardu
 
 ---
 
-## 🚀 Step 1: Flashing the WebUI to the Module
+## 🚀 Step 1: Download the Library & WebUI Assets
 
-Before using the Arduino library, you need to upload the WebUI files (HTML/CSS/JS) to the Quectel module's internal storage.
+To get the required WebUI files and the Arduino library for your module, please navigate directly to the main library repository:
 
-1. **Connect to PC:** Plug your EC200U-CN module into your computer via USB.
-2. **Prepare Files:** Download the `webui_assets.zip` from the releases page of this repository and extract it.
-3. **Open QFlash / QCOM Tool:** * Connect to the module's AT Command COM port.
-   * Use the `AT+QFUPL` command or the Quectel File Manager tool to upload the extracted WebUI files into the module's `/datatx/` or UFS directory.
-   * *See the [Wiki](https://github.com/MISTERNEGATIVE21/Quectel_EC200U_WebUI/wiki) for a detailed flashing guide.*
+👉 **[https://github.com/MISTERNEGATIVE21/QuectelEC200U](https://github.com/MISTERNEGATIVE21/QuectelEC200U)**
 
-![Flashing Success](images/demo_flash.png)
-> **Figure 3:** Successful upload of the WebUI assets.
+There you will find the library release and all necessary files to interface your Quectel EC200U-CN with Arduino.
 
 ---
 
@@ -47,20 +42,9 @@ Connect your Arduino (e.g., ESP32, Arduino Mega) to the EC200U-CN module.
 
 ---
 
-## 💻 Step 3: Installing the Arduino Library
+## 📝 Step 3: Running the WebUI Example Code
 
-To control the WebUI and module from your code, you need to install the `QuectelEC200U` library.
-
-1. Go to the main library repository: **[MISTERNEGATIVE21/QuectelEC200U](https://github.com/MISTERNEGATIVE21/QuectelEC200U)**.
-2. Download the repository as a `.ZIP` file.
-3. Open the **Arduino IDE**.
-4. Go to **Sketch** -> **Include Library** -> **Add .ZIP Library...** and select the downloaded file.
-
----
-
-## 📝 Running the WebUI Example Code
-
-Instead of writing the code from scratch, you can use the pre-built example included right in the library!
+Once you have downloaded and installed the `QuectelEC200U` library from the link above, you can use the pre-built example to get started instantly!
 
 1. In the Arduino IDE, go to **File** -> **Examples** -> **QuectelEC200U**.
 2. Select the **`Webui`** example sketch.
